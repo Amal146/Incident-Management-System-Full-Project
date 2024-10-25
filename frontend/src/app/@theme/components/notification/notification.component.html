@@ -1,0 +1,21 @@
+<div class="notifications"> 
+        <label class="notifications-label">    ¤ Notifications ¤    </label>
+        <nb-card class="list-card" size="small" >
+        <nb-list>
+            <nb-list-item *ngFor="let notification of notifications">
+                <p>{{ notification.message }} </p>
+                <br>
+                <p></p>
+                <button nbButton status="primary" (click)="markAsRead(notification.id)">
+                     Mark as read
+                </button>
+                </nb-list-item>
+                <nb-list-item *ngIf="!notifications?.length">
+                          No notifications right now.
+                </nb-list-item>
+                </nb-list>   
+        </nb-card>
+</div>
+
+
+

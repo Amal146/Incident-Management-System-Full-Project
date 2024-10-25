@@ -1,0 +1,141 @@
+id,name,manager_id
+23,ModeShape,114
+24,Maven Deploy Plugin,128
+25,JGroups,142
+26,mod_cluster,156
+27,JBoss Developer Framework,170
+28,Migration,184
+29,Log Tool,198
+30,JBoss Log Manager,212
+31,LiveOak,226
+32,Keycloak,240
+33,Jipijapa,254
+34,JBoss Transaction Manager,268
+35,JBoss Tools Integration Stack,282
+36,JBoss Web Services,296
+37,JBoss Web,310
+38,JBoss VFS,324
+39,Seam 2,338
+40,JBoss Threads,352
+41,JBoss Serialization,366
+42,JBRULES,380
+43,JBoss Remoting,394
+44,JBoss Profiler,408
+45,jBPM,422
+46,JBoss Enterprise Application Platform 6,436
+47,JBoss Enterprise Application Platform 4 and 5,450
+48,Red Hat JBoss Fuse,464
+49,JBoss OSGi,478
+50,Tools (JBoss Tools),492
+51,JBoss Metadata,506
+52,JBoss Messaging,520
+53,JBoss Marshalling,534
+54,JBoss Logging,548
+55,JBoss Kernel,576
+56,IronJacamar,590
+57,JBoss JPA,604
+58,JBoss JMX,618
+59,Drools,632
+60,JBoss Genetic,646
+61,JBoss ESB,660
+62,jBeret,674
+63,JBoss JavaEE Spec APIs,702
+64,JBoss Enterprise Application Platform,716
+65,Developer Studio (JBoss Developer Studio),730
+66,Forge,744
+67,JBoss Deployers,758
+68,JBoss Common,772
+69,JBoss Clustering,786
+70,DTGov (Design Time Governance),800
+71,JBoss Build System,814
+72,JBoss Blog,828
+73,JBoss AS Maven Plugins,842
+74,Application Server 3  4  5 and 6,856
+75,Activiti,870
+76,Infinispan,884
+77,Immutant,898
+78,HAL,912
+79,JBoss Admin Console,926
+80,Javassist,940
+81,Hot Rod C++ client,954
+82,HornetQ,968
+83,Guvnor SOA,982
+84,Guvnor,1010
+85,AeroGear,1024
+86,GateIn WSRP,1038
+87,GateIn Portal,1052
+88,GateIn WCM,1066
+89,GateIn Web Container Integration,1080
+90,GateIn SSO,1094
+91,GateIn Portlet Container,1108
+92,GateIn Management,1122
+93,Gadget Server and Gadgets,1136
+94,Fuse Portable Runtime,1150
+95,Forge Plugins,1164
+96,FUSE ESB,1178
+97,Errai,1192
+98,Fuse MQ Enterprise,1206
+99,EJB 3.0,1220
+100,Fuse IDE,1234
+101,EJB Client Library (AS7+),1248
+102,Visual Design,1262
+103,DMR,1276
+104,CDI TCK,1290
+105,CDI Specification Issues,1304
+106,CapeDwarf,1318
+107,Byteman,1332
+108,JBoss.org Build/License tracker,1346
+109,BPM Console,1360
+110,Blacktie,1374
+111,BoxGrinder Build,1388
+112,Application Server 7,1402
+113,Aesh,1416
+114,Arquillian,1430
+115,AeroGear Push,1444
+116,Arquillian Graphene,1458
+117,AeroGear Security,1472
+118,AeroGear Android,1486
+119,AeroGear SimplePush,1500
+120,AeroGear iOS,1514
+121,Agorava,1528
+122,AeroGear JavaScript,1542
+123,Hadoop YARN,1556
+124,WSS4J,1570
+125,Wicket,1584
+126,VYSPER,1598
+127,UIMA,1612
+128,Tajo,1626
+129,Sqoop,1640
+130,Solr,1654
+131,Sling,1668
+132,Rampart,1682
+133,Qpid,1696
+134,Qpid Proton,1710
+135,Openmeetings,1724
+136,Mesos,1738
+137,Hadoop Map/Reduce,1752
+138,Lucene - Core,1766
+139,James Server,1780
+140,Karaf,1794
+141,Apache Jena,1808
+142,Hive,1822
+143,Apache Helix,1836
+144,Hama,1850
+145,Apache Gora,1864
+146,Geronimo,1878
+147,RTGov (Run Time Governance),1892
+148,CXF,1906
+149,Celix,1920
+150,Camel,1934
+151,Buildr,1948
+152,Bigtop,1962
+153,Accumulo,1976
+154,Hibernate Search,1990
+155,XNIO,2004
+156,Wise,2018
+157,WildFly,2032
+158,S-RAMP,2046
+159,Teiid Designer,2060
+160,Weld,2074
+161,Enterprise Maven Repository (Project Wolf),2088
+162,WindUp,2102

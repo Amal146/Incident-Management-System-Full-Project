@@ -1,0 +1,104 @@
+<div class="row">
+  <div class="col-lg-6">
+    <nb-card style="display: flex">
+      <nb-card-header>Add Incident</nb-card-header>
+      <nb-card-body>
+        <!-- Title Field -->
+        <form (ngSubmit)="onSubmit()" #incidentForm="ngForm">
+          <div class="form-group">
+            <label for="title" class="col-sm-3 label">Title</label>
+            <input
+              nbInput
+              fullWidth
+              shape="round"
+              placeholder="Rounded border"
+              type="text"
+              [(ngModel)]="incidentReport.title"
+              class="form-control"
+              id="title"
+              name="title"
+              placeholder="Enter incident title"
+              required
+              #title="ngModel"
+            />
+            <div
+              [hidden]="title.valid || title.pristine"
+              class="alert alert-danger"
+            >
+              Title is required
+            </div>
+          </div>
+
+          <!-- Description Field -->
+          <div class="form-group">
+            <label for="description" class="col-sm-3 label">Description</label>
+            <textarea
+              rows="5"
+              nbInput
+              fullWidth
+              shape="round"
+              placeholder="Text Area"
+              [(ngModel)]="incidentReport.description"
+              class="form-control"
+              id="description"
+              name="description"
+              placeholder="Enter incident description"
+              required
+              #description="ngModel"
+            ></textarea>
+            <div
+              [hidden]="description.valid || description.pristine"
+              class="alert alert-danger"
+            >
+              Description is required
+            </div>
+          </div>
+
+          <!-- Severity Field -->
+          <div class="form-group row">
+            <label class="col-sm-3 label">Severity</label>
+            <div class="col-sm-9">
+              <nb-radio-group
+                [(ngModel)]="incidentReport.severity"
+                name="severity"
+                required
+                #severity="ngModel"
+              >
+                <nb-radio value="Low">Low</nb-radio>
+                <nb-radio value="Medium">Medium</nb-radio>
+                <nb-radio value="High">High</nb-radio>
+                <nb-radio value="Critical">Critical</nb-radio>
+              </nb-radio-group>
+            </div>
+          </div>
+
+          <!-- Application Field -->
+          <div class="form-group row">
+            <label class="col-sm-3 label">Application</label>
+            <div class="col-sm-9">
+              <nb-select
+                [(ngModel)]="incidentReport.application.id"
+                name="application"
+                required
+                #applicationId="ngModel"
+                placeholder="Select a project"
+              >
+                <nb-option *ngFor="let app of applications" [value]="app.id">
+                  {{ app.name }}
+                </nb-option>
+              </nb-select>
+            </div>
+          </div>
+
+          <button
+            type="submit"
+            [disabled]="!incidentForm.form.valid"
+            class="btn btn-info"
+          >
+            Submit
+          </button>
+        </form>
+      </nb-card-body>
+    </nb-card>
+  </div>
+</div>

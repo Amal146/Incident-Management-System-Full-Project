@@ -1,0 +1,16 @@
+<nb-card [nbSpinner]="loading" nbSpinnerStatus="primary">
+  <nb-card-header>
+    Incidents Table
+  </nb-card-header>
+
+  <nb-card-body>
+    <ng2-smart-table [settings]="settings" 
+    [source]="incidents" 
+    (deleteConfirm)="onDeleteConfirm($event)"
+    (editConfirm)="onEditConfirm($event)"
+    (createConfirm)="onCreateConfirm($event)"
+     >
+    </ng2-smart-table>
+  </nb-card-body>
+</nb-card>
+

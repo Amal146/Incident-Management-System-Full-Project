@@ -1,0 +1,18 @@
+<nb-card-header>
+  Total Incidents
+</nb-card-header>
+<nb-card-body>
+  <div class="chart-info">
+    <div [style.color]="color" style="line-height: 40px;">{{ name }}</div>
+    <br>
+    <div class="time-period" >Percentage:</div>
+    <br>
+    <div id="value" class="h6">{{ value }}%</div>
+  </div>
+  <ngx-earning-pie-chart *ngIf="earningPieChartData.length > 0"
+    [values]="earningPieChartData"
+    (selectPie)="changeChartInfo($event)"
+    [defaultSelectedApp]="defaultSelectedApp">
+  </ngx-earning-pie-chart>
+  
+</nb-card-body>

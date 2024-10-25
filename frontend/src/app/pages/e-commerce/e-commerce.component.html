@@ -1,0 +1,43 @@
+<!-- Dashboard Screen  -->
+<div class="row">
+
+  <div class="col-xxl-7">
+  <nb-select 
+    multiple 
+    id="graph-selector" 
+    fullWidth 
+    style="margin-bottom:10px ;"
+    (selectedChange)="onGraphSelectionChange($event)" 
+    [(ngModel)]="selectedItem" 
+    status="primary">
+    <nb-option value="all">Show All</nb-option>
+    <nb-option value="incidentPerStatus">Incidents Per Status</nb-option>
+    <nb-option value="incidentPerSeverityAndType">Incidents Per Severity and Type</nb-option>
+    <nb-option value="incidentSummary">Incidents Summary</nb-option>
+    <nb-option value="incidentPerSeverity">Incidents Per Severity</nb-option>
+    <nb-option value="incidentPerProject">Incidents Per Project</nb-option>
+  </nb-select>
+</div>
+</div>
+<div class="row">
+  <div class="col-xxl-7" id = "incidentPerStatus">
+    <ngx-ecommerce-visitors-analytics></ngx-ecommerce-visitors-analytics>
+  </div>
+  <div class="col-xxl-5" id = "incidentPerSeverityAndType">
+    <ngx-ecommerce-charts></ngx-ecommerce-charts>
+  </div>
+</div>
+<div class="row">
+  <div class="col-xxl-2" id = "incidentSummary">
+    <ngx-progress-section></ngx-progress-section>
+  </div>
+  <div class="col-xxl-4" id = "incidentPerSeverity">
+    <ngx-user-activity></ngx-user-activity>
+  </div>
+  <div class="col-xxl-6" id = "incidentPerProject">
+    <ngx-earning-card></ngx-earning-card>
+  </div>
+  
+  
+</div>
+

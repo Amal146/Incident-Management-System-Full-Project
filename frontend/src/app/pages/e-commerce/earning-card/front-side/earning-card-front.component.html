@@ -1,0 +1,24 @@
+<nb-card-header style="display: flex; justify-content: space-between; align-items: center;" >
+  <span>Projects Analysis</span>
+  <nb-select style="margin-right: 20px;" *ngIf="apps.length > 0" [selected]="selectedApp" [compareWith]="compareFn" (selectedChange)="changeApp($event)">
+    <nb-option *ngFor="let app of apps" [value]="app">{{ app.name }}</nb-option>
+</nb-select>
+</nb-card-header>
+
+
+<nb-card-body *ngIf="incidentLiveUpdateCardData">
+  <div class="chart-info">
+    <div>Total Incident</div>
+    <div class="h6">{{ incidentLiveUpdateCardData?.dailyIncome | ngxNumberWithCommas }}</div>
+    <div class="delta"
+         [class.up]="incidentLiveUpdateCardData?.delta?.up"
+         [class.down]="!incidentLiveUpdateCardData?.delta?.up">
+      <nb-icon [icon]="incidentLiveUpdateCardData?.delta?.up ? 'arrow-up' : 'arrow-down'"
+               pack="eva"
+               class="direction">
+      </nb-icon>
+      {{ incidentLiveUpdateCardData?.delta?.value }}%
+    </div>
+  </div>
+  <ngx-earning-live-update-chart [linesData]="incidentLiveUpdateCardData?.liveChart"></ngx-earning-live-update-chart>
+</nb-card-body>

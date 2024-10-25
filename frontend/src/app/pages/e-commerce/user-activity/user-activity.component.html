@@ -1,0 +1,54 @@
+<nb-card size="medium" [nbSpinner]="loading" nbSpinnerStatus="primary">
+
+  <nb-card-header>
+    <span>Incident Severity Analysis</span>
+    <nb-select [selected]="type" (selectedChange)="getIncidentPeriod($event); type = $event">
+      <nb-option *ngFor="let t of types" [value]="t">{{ t }}</nb-option>
+    </nb-select>
+  </nb-card-header>
+
+  <nb-list class="user-activity-list">
+    <nb-list-item *ngFor="let item of incidentActivity">
+
+      <div class="visited-date">
+        {{ item.Date }}
+      </div>
+
+      <div class="visited-pages-count">
+        <div class="caption">Total Incident</div>
+        <div class="value">{{ item.ReportedIncident }}</div>
+      </div>
+
+      <div class="visited-percentages">
+        <div class="caption">Critical , %</div>
+        <div class="delta value" [class.up]="item.CriticalDeltaup" [class.down]="!item.CriticalDeltaup">
+          <nb-icon [icon]="item.CriticalDeltaup ? 'arrow-up' : 'arrow-down'" pack="eva"></nb-icon>
+          {{ item.criticalPercentage }}%
+        </div>
+      </div>
+      <div class="visited-percentages">
+        <div class="caption">High , %</div>
+        <div class="delta value" [class.up]="item.HighDeltaup" [class.down]="!item.HighDeltaup">
+          <nb-icon [icon]="item.HighDeltaup ? 'arrow-up' : 'arrow-down'" pack="eva"></nb-icon>
+          {{ item.highPercentage }}%
+        </div>
+      </div>
+      <div class="visited-percentages">
+        <div class="caption">Medium , %</div>
+        <div class="delta value" [class.up]="item.MediumDeltaup" [class.down]="!item.MediumDeltaup">
+          <nb-icon [icon]="item.MediumDeltaup ? 'arrow-up' : 'arrow-down'" pack="eva"></nb-icon>
+          {{ item.mediumPercentage }}%
+        </div>
+      </div>
+      <div class="visited-percentages">
+        <div class="caption">Low , %</div>
+        <div class="delta value" [class.up]="item.LowDeltaup" [class.down]="!item.LowDeltaup">
+          <nb-icon [icon]="item.LowDeltaup ? 'arrow-up' : 'arrow-down'" pack="eva"></nb-icon>
+          {{ item.lowPercentage }}%
+        </div>
+      </div>
+
+    </nb-list-item>
+  </nb-list>
+
+</nb-card>

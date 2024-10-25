@@ -1,0 +1,78 @@
+<div class="header-container">
+  <div class="logo-container">
+    <a (click)="toggleSidebar()" href="#" class="sidebar-toggle">
+      <nb-icon icon="menu-2-outline"></nb-icon>
+    </a>
+    <a class="logo" href="#" (click)="navigateHome()">InciManage</a>
+  </div>
+  <nb-select
+    [selected]="currentTheme"
+    (selectedChange)="changeTheme($event)"
+    status="primary"
+  >
+    <nb-option *ngFor="let theme of themes" [value]="theme.value">
+      {{ theme.name }}</nb-option
+    >
+  </nb-select>
+</div>
+
+<div class="header-container" style="margin: 10px;">
+  <nb-action 
+  size="small"
+  style="margin: 10px;" 
+  (click)="showChat = !showChat; hasUnreadMessages = false"  
+  icon="message-square-outline"
+  [badgeDot]="hasUnreadMessages"
+  badgePosition="top right"
+  badgeStatus="info"
+>
+</nb-action>
+
+<!-- Use ngIf to conditionally render the chat component -->
+ <!-- Overflow chat on bottom right of the whole page -->
+<nb-chat 
+  *ngIf="showChat" 
+  title="InciManage Help Center" 
+  size="medium" 
+  status="primary">
+  <nb-chat-message *ngFor="let msg of messages"
+                   [type]="msg.type"
+                   [message]="msg.text"
+                   [reply]="msg.reply"
+                   [sender]="msg.user.name"
+                   [date]="msg.date"
+                   [files]="msg.files"
+                   [quote]="msg.quote"
+                   [latitude]="msg.latitude"
+                   [longitude]="msg.longitude"
+                   [avatar]="msg.user.avatar">
+  </nb-chat-message>
+  <nb-chat-form (send)="sendMessage($event)" [dropFiles]="true">
+  </nb-chat-form>
+</nb-chat>
+    <nb-action
+      style="margin: 10px;"
+      icon="bell-outline"
+      (click)="toggleNotifications()"
+      [badgeDot]="unreadCount > 0"
+      badgePosition="top right"
+      [nbPopover] = "notifyComponent"
+      nbPopoverPlacement="bottom"
+      badgeStatus ="danger"
+    >
+    </nb-action>
+
+    <app-notifications *ngIf="showNotifications"></app-notifications>
+    
+      <nb-action class="user-action" style="margin: 10px;" *nbIsGranted="['view', 'user']">
+        <nb-user
+          [nbContextMenu]="userMenu"
+          [name]="user.username"
+          [picture]="'assets/images/profile.png'"
+          class="dispaly"
+        ></nb-user>
+      </nb-action>
+    
+    
+
+</div> 

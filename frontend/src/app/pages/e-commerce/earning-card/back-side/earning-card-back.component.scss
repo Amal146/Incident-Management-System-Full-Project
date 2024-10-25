@@ -1,0 +1,44 @@
+@import '../../../../@theme/styles/themes';
+@import 'bootstrap/scss/mixins/breakpoints';
+@import '@nebular/theme/styles/global/breakpoints';
+
+@include nb-install-component() {
+  ngx-earning-pie-chart,
+  .chart-info {
+    flex: 2;
+  }
+
+  .chart-info {
+    padding-top: 0.7rem;
+    font-size: 30pt;
+  }
+
+  .time-period {
+    margin-bottom: 1rem;
+    margin-top: 3rem;
+    font-size: 30pt;
+  }
+  
+  #value {
+    margin-top: 0.5rem;
+    font-size: 30pt;
+  }
+
+  .echart {
+    position: relative;
+    width: 100%;
+    height: 80%;
+  }
+
+  @include media-breakpoint-between(xl, xl) {
+    ngx-earning-pie-chart {
+      flex: 3;
+    }
+  }
+
+  @include media-breakpoint-between(sm, sm) {
+    ngx-earning-pie-chart {
+      flex: 3;
+    }
+  }
+}

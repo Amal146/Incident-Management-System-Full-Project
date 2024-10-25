@@ -1,0 +1,26 @@
+
+  <nb-layout-column>
+    <nb-card  nbSpinnerStatus="primary">
+      <nb-card-header> Open Incidents Table </nb-card-header>
+
+      <nb-card-body>
+        <ng2-smart-table [settings]="settings" [source]="source"></ng2-smart-table>
+
+      </nb-card-body>
+      <br>
+      <br>
+      <div>
+      <button
+        nbButton
+        hero
+        fullWidth
+        status="primary"
+        nbPopoverPlacement="top"
+        [nbPopover]="formComponent"
+      >
+        Assign new Task
+      </button>
+    </div>
+    </nb-card>
+  </nb-layout-column>
+

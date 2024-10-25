@@ -1,0 +1,18 @@
+<div class="visitors-statistics">
+  <h4 class="h1" > {{ totalInci }}</h4>
+  <div class="visitors-title">Total Incidents</div>
+  <div class="statistics-chart">
+    <div echarts
+         [options]="option"
+         class="echart"
+         (chartInit)="onChartInit($event)">
+    </div>
+  </div>
+  <div class="statistics-footer">
+    <div class="chart-values h5">
+      <span class="chart-value">{{resolvedPercent.toPrecision(4).toString()}} %</span>
+      <span class="chart-value">{{pendingPercent.toPrecision(4).toString()}} %</span>
+    </div>
+    <ngx-legend-chart class="visitors-statistics-legend" [legendItems]="chartLegend"></ngx-legend-chart>
+  </div>
+</div>
